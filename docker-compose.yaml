@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  proxy: # Nginx reverse proxy
+    build: ./proxy
+    ports:
+      - "80:80"
+
+  time: # A PHP Time service that echos the time
+    build: ./time
+
+  rand: # A Golang Random string generator service
+    build: ./rand
+#
